@@ -15,7 +15,7 @@ An interactive web application that combines classical cryptography tools with m
 
 ## Technologies Used
 
-- HTML5, CSS3, JavaScript
+- HTML5, CSS3, JavaScript, Python
 - Chart.js for data visualization
 - Responsive design with CSS Grid and Flexbox
 - Client-side encryption/decryption algorithms
