@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoLab - Cryptography & Data Science</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i>🔐</i>
+                    <span>CryptoLab DS</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#data-science">Data Science</a></li>
+                        <li><a href="#ml-crypto">ML Cryptanalysis</a></li>
+                        <li><a href="#algorithms">Algorithms</a></li>
+                        <li><a href="#history">History</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Cryptography Meets Data Science</h1>
+            <p>Explore cryptographic algorithms through the lens of data science with frequency analysis, pattern recognition, and machine learning approaches.</p>
+            <a href="#data-science" class="btn">Explore Data Science Tools</a>
+        </div>
+    </section>
+
+    <section id="data-science" class="section data-science-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Data Science Cryptanalysis</h2>
+                <p>Use data science techniques to analyze and break ciphers</p>
+            </div>
+            
+            <div class="ds-grid">
+                <div class="ds-card">
+                    <h3>Frequency Analysis</h3>
+                    <p>Analyze letter frequency distributions to break substitution ciphers</p>
+                    <div class="form-group">
+                        <label for="freq-text">Text to analyze:</label>
+                        <textarea id="freq-text" class="form-control" placeholder="Enter encrypted text for frequency analysis">The quick brown fox jumps over the lazy dog. This sentence contains all letters of the English alphabet.</textarea>
+                    </div>
+                    <button id="analyze-freq" class="btn">Analyze Frequency</button>
+                    <div class="chart-container">
+                        <canvas id="freq-chart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="ds-card">
+                    <h3>Pattern Recognition</h3>
+                    <p>Identify repeated patterns that might indicate cipher weaknesses</p>
+                    <div class="form-group">
+                        <label for="pattern-text">Text for pattern analysis:</label>
+                        <textarea id="pattern-text" class="form-control" placeholder="Enter text to find patterns">Ciphertext with repeated sequences can reveal information about the encryption method used.</textarea>
+                    </div>
+                    <button id="find-patterns" class="btn">Find Patterns</button>
+                    <div class="result-box" id="pattern-result">
+                        Pattern analysis results will appear here
+                    </div>
+                </div>
+                
+                <div class="ds-card">
+                    <h3>Entropy Analysis</h3>
+                    <p>Measure the randomness of text to detect encryption</p>
+                    <div class="form-group">
+                        <label for="entropy-text">Text for entropy calculation:</label>
+                        <textarea id="entropy-text" class="form-control" placeholder="Enter text to calculate entropy">Encrypted text typically has higher entropy than normal language text.</textarea>
+                    </div>
+                    <button id="calculate-entropy" class="btn">Calculate Entropy</button>
+                    <div class="result-box" id="entropy-result">
+                        Entropy: Not calculated yet
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="entropy-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ml-crypto" class="section ml-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Machine Learning in Cryptography</h2>
+                <p>Explore how ML techniques can be applied to cryptographic problems</p>
+            </div>
+            
+            <div class="ml-grid">
+                <div class="ml-card">
+                    <h3>Cipher Classification</h3>
+                    <p>Train a model to identify the type of cipher used</p>
+                    <div class="form-group">
+                        <label for="cipher-sample">Ciphertext sample:</label>
+                        <textarea id="cipher-sample" class="form-control" placeholder="Enter ciphertext to classify">Gur dhvpx oebja sbk whzcf bire gur ynml qbt.</textarea>
+                    </div>
+                    <button id="classify-cipher" class="btn">Classify Cipher</button>
+                    <div class="result-box" id="classification-result">
+                        Classification results will appear here
+                    </div>
+                </div>
+                
+                <div class="ml-card">
+                    <h3>Neural Cryptanalysis</h3>
+                    <p>Simulate a neural network approach to breaking ciphers</p>
+                    <div class="form-group">
+                        <label for="neural-input">Input for neural analysis:</label>
+                        <textarea id="neural-input" class="form-control" placeholder="Enter text for neural analysis">Sample text for neural network simulation.</textarea>
+                    </div>
+                    <button id="neural-analysis" class="btn btn-warning">Run Neural Analysis</button>
+                    <div class="result-box" id="neural-result">
+                        Neural network analysis results will appear here
+                    </div>
+                </div>
+                
+                <div class="ml-card">
+                    <h3>Training Data Generator</h3>
+                    <p>Generate training data for cryptographic ML models</p>
+                    <div class="form-group">
+                        <label for="training-text">Base text for training data:</label>
+                        <textarea id="training-text" class="form-control" placeholder="Enter base text">This is sample text for generating training data.</textarea>
+                    </div>
+                    <button id="generate-data" class="btn">Generate Training Data</button>
+                    <div class="result-box" id="training-result">
+                        Generated training data will appear here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cryptography Tools</h2>
+                <p>Use our tools to encrypt and decrypt messages using different algorithms</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <h3>Caesar Cipher</h3>
+                    </div>
+                    <div class="tool-body">
+                        <div class="form-group">
+                            <label for="caesar-text">Text to encrypt/decrypt:</label>
+                            <textarea id="caesar-text" class="form-control" placeholder="Enter your text here">Hello World! This is a test message.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="caesar-shift">Shift value (1-25):</label>
+                            <input type="number" id="caesar-shift" class="form-control" min="1" max="25" value="3">
+                        </div>
+                        <div class="form-group">
+                            <button id="caesar-encrypt" class="btn" style="margin-right: 10px;">Encrypt</button>
+                            <button id="caesar-decrypt" class="btn">Decrypt</button>
+                        </div>
+                        <div class="result-box" id="caesar-result"></div>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <h3>Vigenère Cipher</h3>
+                    </div>
+                    <div class="tool-body">
+                        <div class="form-group">
+                            <label for="vigenere-text">Text to encrypt/decrypt:</label>
+                            <textarea id="vigenere-text" class="form-control" placeholder="Enter your text here">This is a secret message.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="vigenere-key">Key (letters only):</label>
+                            <input type="text" id="vigenere-key" class="form-control" placeholder="Enter key" value="KEY">
+                        </div>
+                        <div class="form-group">
+                            <button id="vigenere-encrypt" class="btn" style="margin-right: 10px;">Encrypt</button>
+                            <button id="vigenere-decrypt" class="btn">Decrypt</button>
+                        </div>
+                        <div class="result-box" id="vigenere-result"></div>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <h3>Base64 Encoding/Decoding</h3>
+                    </div>
+                    <div class="tool-body">
+                        <div class="form-group">
+                            <label for="base64-text">Text to encode/decode:</label>
+                            <textarea id="base64-text" class="form-control" placeholder="Enter your text here">This will be encoded in Base64.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <button id="base64-encode" class="btn" style="margin-right: 10px;">Encode</button>
+                            <button id="base64-decode" class="btn">Decode</button>
+                        </div>
+                        <div class="result-box" id="base64-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="algorithms" class="section algorithms">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cryptographic Algorithms</h2>
+                <p>Learn about different cryptographic techniques and their applications</p>
+            </div>
+            
+            <div class="algo-grid">
+                <div class="algo-card">
+                    <div class="algo-icon">🔑</div>
+                    <h3>Symmetric Encryption</h3>
+                    <p>Uses the same key for encryption and decryption. Fast and efficient for large amounts of data.</p>
+                </div>
+                
+                <div class="algo-card">
+                    <div class="algo-icon">🔓</div>
+                    <h3>Asymmetric Encryption</h3>
+                    <p>Uses a pair of keys: public and private. More secure but slower than symmetric encryption.</p>
+                </div>
+                
+                <div class="algo-card">
+                    <div class="algo-icon">📝</div>
+                    <h3>Hash Functions</h3>
+                    <p>One-way functions that convert data into fixed-size strings. Used for data integrity verification.</p>
+                </div>
+                
+                <div class="algo-card">
+                    <div class="algo-icon">🔒</div>
+                    <h3>Digital Signatures</h3>
+                    <p>Mathematical scheme for verifying the authenticity of digital messages or documents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="section history">
+        <div class="container">
+            <div class="section-title">
+                <h2>History of Cryptography</h2>
+                <p>From ancient times to modern encryption</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">~100 BC</div>
+                        <h3>Caesar Cipher</h3>
+                        <p>Julius Caesar used this substitution cipher to protect military communications by shifting letters in the alphabet.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">16th Century</div>
+                        <h3>Vigenère Cipher</h3>
+                        <p>Blaise de Vigenère created this polyalphabetic cipher that uses a keyword to shift letters, making it more secure than simple substitution.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">World War II</div>
+                        <h3>Enigma Machine</h3>
+                        <p>The Germans used this electro-mechanical rotor cipher machine, which was famously broken by Allied cryptanalysts.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1970s</div>
+                        <h3>Public-Key Cryptography</h3>
+                        <p>Whitfield Diffie and Martin Hellman introduced the concept of asymmetric key cryptography, revolutionizing secure communications.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000s</div>
+                        <h3>Quantum Cryptography</h3>
+                        <p>Emerging field that uses quantum mechanical properties to perform cryptographic tasks, promising unprecedented security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i>🔐</i>
+                    <span>CryptoLab DS</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#tools">Tools</a>
+                    <a href="#data-science">Data Science</a>
+                    <a href="#ml-crypto">ML Cryptanalysis</a>
+                    <a href="#algorithms">Algorithms</a>
+                    <a href="#history">History</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 CryptoLab DS. All rights reserved. | Educational purposes only.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
